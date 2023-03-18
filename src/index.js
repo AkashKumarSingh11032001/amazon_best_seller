@@ -1,14 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+
+const Person = () => {
+    return (
+        <div>Who are you?</div>
+    );
+}
+
+const Answer = () => {
+  return <div>My name is Akash!</div>;
+};
+
 const Greeting = () => {
   return (
     <>
-      <div>React Tutorial</div>
-      <ul>
-        <a href="#">Click me!</a>
-      </ul>
-      <div>Don't click me</div>
+      <h1>React Tutorial</h1>
+      <Person />
+      <Answer />
     </>
   );
 };
