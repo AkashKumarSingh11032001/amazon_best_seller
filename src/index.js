@@ -5,6 +5,10 @@ const Greeting = () => {
   return (
     <>
       <div>React Tutorial</div>
+      <ul>
+        <a href="#">Click me!</a>
+      </ul>
+      <div>Don't click me</div>
     </>
   );
 };
