@@ -25,15 +25,17 @@ const Book = (props) => {
 };
 
 const EventExample = () => {
-  const handleFormInput = () => {
-    console.log("You'r typing something on Input box.")
-  }
+  const handleFormInput = (e) => {
+    console.log(e.target.value);
+    // console.log("You'r typing something on Input box.")
+  };
   const handleButtonClick = () => {
-    alert("You just clicked search button.")
-  }
-  const handleFormSubmit = () => {
-    console.log("Form Submited!")
-  }
+    alert("You just clicked search button.");
+  };
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form Submited!");
+  };
   return (
     <section>
       <form onSubmit={handleFormSubmit}>
@@ -44,7 +46,7 @@ const EventExample = () => {
           onClick={handleFormInput}
           style={{ margin: "1rem 0" }}
         />
-      <button type='submit'>Submit me</button>
+        <button type="submit">Submit me</button>
       </form>
       <button onClick={handleButtonClick}>Search</button>
     </section>
