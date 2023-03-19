@@ -22,8 +22,8 @@ const Image = () => {
 const Book = () => {
   return (
     <article className='book'>
-    <Person />
     <Image />
+    <Person />
     <Title />
     </article>
   )
