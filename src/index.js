@@ -28,16 +28,25 @@ const EventExample = () => {
   const handleFormInput = () => {
     console.log("You'r typing something on Input box.")
   }
-  const habdleButtonClick = () => {
+  const handleButtonClick = () => {
     alert("You just clicked search button.")
+  }
+  const handleFormSubmit = () => {
+    console.log("Form Submited!")
   }
   return (
     <section>
-      <form>
+      <form onSubmit={handleFormSubmit}>
         <h2> Search Book </h2>
-        <input type="text" name="bookProduct" onClick={handleFormInput} style={{ margin: "1rem 0" }} />
+        <input
+          type="text"
+          name="bookProduct"
+          onClick={handleFormInput}
+          style={{ margin: "1rem 0" }}
+        />
+      <button type='submit'>Submit me</button>
       </form>
-      <button onClick={habdleButtonClick}>Search</button>
+      <button onClick={handleButtonClick}>Search</button>
     </section>
   );
 };
