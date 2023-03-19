@@ -2,12 +2,12 @@ import React from 'react'
 import ReactDOM from "react-dom/client";
 import './index.css'
 
-const Person = () => {
-    return <h4>Jordan Moore </h4>;
+const Person = (props) => {
+    return <h4>{props.person}</h4>;
 }
 
-const Title = () => {
-    return <h2>Interesting Facts For Curious Minds</h2>;
+const Title = (props) => {
+    return <h2>{props.title}</h2>;
 }
 
 const Image = () => {
@@ -19,24 +19,31 @@ const Image = () => {
     );
 }
 
-const Book = () => {
+const Book = (props) => {
+  
   return (
     <article className='book'>
     <Image />
-    <Person />
-    <Title />
+    <Person person={props.person}/>
+    <Title title={props.title}/>
     </article>
   )
 }
 
 const BookList = () => {
-    return (
-      <section className='booklist'>
-        <Book />
-        <Book />
-        <Book />
-      </section>
-    );
+  const title_1 = "Interesting Facts For Akash Minds";
+  const person_1 = "Akash Singh"
+  const title_2 = "Akash Minds";
+  const person_2 = "AKS"
+  const title_3 = "Good Improvement";
+  const person_3 = "Singh Akash";
+  return (
+    <section className="booklist">
+      <Book title={title_1} person={person_1} />
+      <Book title={title_2} person={person_2} />
+      <Book title={title_3} person={person_3} />
+    </section>
+  );
 }
 
 
