@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import {bookList} from "./bookList";
 
 const Person = (props) => {
   return <h4>{props.person}</h4>;
@@ -68,27 +69,6 @@ const EventExample = () => {
 //   person: "Robin Sharma",
 //   img: "https://m.media-amazon.com/images/I/41MC15v6UIL._SY344_BO1,204,203,200_.jpg",
 // };
-
-const bookList = [
-  {
-    title: "Interesting Facts For Akash Minds",
-    person: "Jordan Moore",
-    img: "https://m.media-amazon.com/images/I/410llGwMZGL._SX328_BO1,204,203,200_.jpg",
-    id: 1,
-  },
-  {
-    title: "Atomic Habits",
-    person: "James Clear",
-    img: "https://m.media-amazon.com/images/I/419hlQBPe6L._SY346_.jpg",
-    id: 2,
-  },
-  {
-    title: "The 5 AM Club",
-    person: "Robin Sharma",
-    img: "https://m.media-amazon.com/images/I/41MC15v6UIL._SY344_BO1,204,203,200_.jpg",
-    id: 3,
-  },
-];
 
 const BookList = () => {
   return (
