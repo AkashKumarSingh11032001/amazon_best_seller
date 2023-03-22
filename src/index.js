@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import {bookList} from "./bookList";
-import {Book} from "./book"
+import { bookList } from "./bookList";
+import { Book } from "./book";
 
 const EventExample = () => {
   const handleFormInput = (e) => {
@@ -51,8 +51,11 @@ const EventExample = () => {
 
 const BookList = () => {
   return (
-    <section className="booklist">
-      {/* <Book
+    <>
+      <h1>Amazon Best Sellers</h1>
+
+      <section className="booklist">
+        {/* <Book
         title={firstBook.title}
         person={firstBook.person}
         img={firstBook.img}
@@ -67,20 +70,20 @@ const BookList = () => {
         person={thirdBook.person}
         img={thirdBook.img}
       /> */}
-      {/* <EventExample /> */}
-
-      {bookList.map((book,index) => {
-        return (
-          <Book
-            title={book.title}
-            person={book.person}
-            img={book.img}
-            key={book.id}
-            number={index}
-          />
-        );
-      })}
-    </section>
+        {/* <EventExample /> */}
+        {bookList.map((book, index) => {
+          return (
+            <Book
+              title={book.title}
+              person={book.person}
+              img={book.img}
+              key={book.id}
+              number={index}
+            />
+          );
+        })}
+      </section>
+    </>
   );
 };
 

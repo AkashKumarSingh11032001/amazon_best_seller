@@ -11,6 +11,13 @@ body {
   color: #222;
 }
 
+
+h1 {
+  text-align: center;
+  margin-top: 4rem;
+  text-transform: capitalize;
+}
+
 .book {
   background: #fff;
   border-radius: 1rem;
