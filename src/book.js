@@ -16,6 +16,7 @@ export const Book = (props) => {
       <Image img={props.img} />
       <Person person={props.person} />
       <Title title={props.title} />
+      <span className="number">{`# ${props.number + 1}`}</span>;
     </article>
   );
 };

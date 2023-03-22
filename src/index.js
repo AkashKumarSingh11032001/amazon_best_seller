@@ -67,15 +67,16 @@ const BookList = () => {
         person={thirdBook.person}
         img={thirdBook.img}
       /> */}
-      <EventExample />
+      {/* <EventExample /> */}
 
-      {bookList.map((book) => {
+      {bookList.map((book,index) => {
         return (
           <Book
             title={book.title}
             person={book.person}
             img={book.img}
             key={book.id}
+            number={index}
           />
         );
       })}
